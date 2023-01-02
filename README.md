@@ -31,7 +31,7 @@
   </tr>
   <tr>
     <td align="center" colspan=2>
-      <a href="https://jaeyeong815.notion.site/88b29312cff34763884feef11109b340"> 👉 프로젝트 소개서 </a>
+      <a href="https://www.notion.so/2022-12-27-89c3b281a0de484bae47756aad25d2ba"> 👉 프로젝트 소개서 </a>
     </td>
   </tr>
   <tr>
