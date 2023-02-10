@@ -1,13 +1,10 @@
 package captian.group.domain;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Table;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "group_members")
@@ -20,7 +17,19 @@ public class Member {
 
     private String name;
 
+    @Column(unique = true)
     private String email;
 
     private String password;
+
+    @Enumerated(EnumType.STRING)
+    private MemberRole roleType;
+
+//    @Builder
+//    public Member(Long id, String name, String email, String password) {
+//        this.id = id;
+//        this.name = name;
+//        this.email = email;
+//        this.password = password;
+//    }
 }
