@@ -10,6 +10,8 @@ import java.util.Date;
 @Component
 public class JwtProvider {
 
+    private static String secret = "secretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecret";
+
     public String issueAccessToken(User user) {
         long time = 1800000;
         return issueToken(user, time);
@@ -27,7 +29,7 @@ public class JwtProvider {
                 .claim("id", user.getId())
                 .claim("email", user.getEmail())
                 .setExpiration(expiration)
-                .signWith(SignatureAlgorithm.HS512, "secretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecret")
+                .signWith(SignatureAlgorithm.HS512, secret)
                 .compact();
 
         return token;
